@@ -40,15 +40,8 @@ var ViewportActor = (function() {
         return result;
     };
 
-    // var processElement = function (element) {
-    // 	if(element.data('processed') === true)
-    // 		return;
-    // 	element.css('color', 'red');
-    // 	element.data('processed', true); 
-    // };
-
     var processElementsInView = function(that, elements, func) {
-        //		var d1 = new Date().getTime();
+        // var d1 = new Date().getTime();
         if (that.positionBTree == null) {
             that.positionBTree = buildElementsPositionTree(elements)
         }
@@ -56,8 +49,8 @@ var ViewportActor = (function() {
         for (var i = 0; i < elms.length; i++) {
             func(elms[i]);
         }
-        //		var d2 = new Date().getTime();
-        //		console.log('elapsed ' + (d2-d1) + ' ms')
+        // var d2 = new Date().getTime();
+        // console.log('elapsed ' + (d2-d1) + ' ms')
     }
 
     var createInstance = function(selector, func) {

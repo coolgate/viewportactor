@@ -11,9 +11,9 @@ Viewport Actor方便前端开发对浏览器当前视口（viewport）中的元�
 
 Viewport Actor需要JQuery和btree.js支持，用法很简单。首先需要引用viewportactor.js。
 ```html
-    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="btree.js"></script>
-    <script type="text/javascript" src="viewportactor.js"></script>
+	<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="btree.js"></script>
+	<script type="text/javascript" src="viewportactor.js"></script>
 ```
 引入后，只需要为需要绑定的元素进行绑定就行了，下面是示例代码。
 ```javascript
@@ -38,6 +38,8 @@ createInstance()返回的对象实例主要提供了bind(selector, func)和unbin
 请在document加载完成后再进行操作绑定，因为Viewport Actor依赖完整的DOM位置信息来界定HTML元素是否在视口内。
 
 作为一个小技巧，可以使用元素的.data()机制来控制已经触发过操作的元素不再多次触发操作，就像示例中所展示的那样。
+
+932PagesDoc.zip中包含了一个从932页Word文档转出来的HTML的例子，用于性能测试，直接解压到当前目录即可。该例子中，构建B+树处理位置信息的时间在我i7-4710 2.5G笔记本的Chrome浏览器中大约在1.5秒左右，Firefox 4.5秒多，Microsoft Edge 6.7秒，Internet Explorer 11 接近10秒。看来Chrome的性能刚刚的。
 
 ## 许可
 
